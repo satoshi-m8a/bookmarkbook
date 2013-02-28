@@ -4,6 +4,8 @@
 
 # Home page
 GET     /                           controllers.Application.index
-
+GET     /room                       controllers.Application.bookRoom(username: Option[String] ?= None)
+GET     /room/stream                  controllers.Application.stream(username)
+GET     /bookmark                     controllers.Application.bookmark(username,url)
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
